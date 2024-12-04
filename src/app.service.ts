@@ -11,7 +11,6 @@ export class AppService {
   }
 
   async atualizarEmpresa(attEmpresa: CadastroEmpresa){
-    attEmpresa.empresa_nome = "Senac Produções";
     return await this.prismaService.empresa.create({
       data: attEmpresa
     })
